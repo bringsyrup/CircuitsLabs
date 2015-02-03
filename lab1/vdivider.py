@@ -1,4 +1,4 @@
-
+#! /bin/env python
 import smu
 
 def linspace(initial, final, n = 100):
