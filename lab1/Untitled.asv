@@ -1,0 +1,2 @@
+plot(Vout, Vin)
+[p, S] = polyfit(Vin, Vout, 1)
