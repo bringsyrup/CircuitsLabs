@@ -9,7 +9,7 @@ def linspace(initial, final, n=101):
         return []
 
 s = smu.smu()
-v = linspace(0, 5)
+v = linspace(0, 3) 
 f = open('vRDsweep3.csv', 'w')
 f.write('"Vin","Iin","V"\n')
 s.set_current(1, 0.)
