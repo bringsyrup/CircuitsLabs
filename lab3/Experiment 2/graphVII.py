@@ -8,16 +8,16 @@ def makeGraph(CSV):
     f = open(CSV, 'rt')
     try:
         reader = csv.reader(f)
-        Vin = []
-        Iin = []
-        V = []
+        Vb = []
+        Ib = []
+        Ie = []
         for row in reader:
-            Vin.append(row[0])
-            Iin.append(row[1])
-            V.append(row[2])
+            Vb.append(row[0])
+            Ib.append(row[1])
+            Ie.append(row[2])
     finally:
             f.close()
-            return Vin[1:], Iin[1:], V[1:]
+            return Vb[1:], Ib[1:], Ie[1:]
 
 if __name__=="__main__":
 
@@ -25,8 +25,9 @@ if __name__=="__main__":
     colors = ['co', 'mo', 'ko', 'o', 'go', 'ro']
     for i in range(len(sys.argv)):
         if i != 0:
-            Vin, Iin, V = makeGraph(sys.argv[i])
-            plt.semilogy(Vin, Iin, colors[i-1], linewidth=linewidth)
+            Vb, Ib, Ie = makeGraph(sys.argv[i])
+            plt.semilogy(Vb, Ib, colors[i-1], linewidth=linewidth)
+            plt.semilogy(Vb, Ie, colors[i], linewidth=linewidth)
     plt.xlabel("Input Voltage", fontsize=14)
     plt.ylabel("Diode Voltage", fontsize=14)
     plt.title("blah blah", fontsize=20)
