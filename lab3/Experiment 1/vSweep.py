@@ -11,15 +11,13 @@ def linspace(initial, final, n = 100):
 s = smu.smu()
 v = linspace(0.4, 0.71, 101)
 f = open('bjt.csv', 'w')
-f.write('"V","I"\n')
+f.write('"Vb","Ib","Ie"\n')
 
-V = []
-I = []
 for val in v:
     s.set_voltage(1, val)
     s.autorange(1)
     s.autorange(2)
-    f.write('{!s},{!s}\n'.format(val, s.get_current(2)))
+    f.write('{!s},{!s},{!s}\n'.format(val, s.get_current(1), s.get_current(2)))
 
 s.set_voltage(1, 0.)
 s.set_voltage(2, 0.)
