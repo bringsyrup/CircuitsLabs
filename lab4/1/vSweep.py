@@ -11,7 +11,7 @@ def linspace(initial, final, n = 100):
 
 s = smu.smu()
 v = linspace(0., 5., 101)
-f = open('bjt.csv', 'w')
+f = open('bjt3.csv', 'w')
 
 for i in xrange(4):
     raw_input("Press enter when ready to measure " + str(i + 1))
