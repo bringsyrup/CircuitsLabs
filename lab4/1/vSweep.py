@@ -21,10 +21,12 @@ for i in xrange(4):
         s.set_voltage(1, val)
         s.autorange(1)
         s.autorange(2)
+        realVal = s.get_voltage(1)
         Ib = s.get_current(1)
         Ie = s.get_current(2)
         Ic = Ie - Ib
-        f.write('{!s},{!s},{!s},{!s}\n'.format(val, Ib, Ie, Ic))
+        print Ib, Ie
+        f.write('{!s},{!s},{!s},{!s}\n'.format(realVal, Ib, Ie, Ic))
     s.set_voltage(1, 0.)
     s.set_voltage(2, 0.)
 
