@@ -9,6 +9,6 @@ plot(Ix1, [Iz2, Iz3, Iz4], 'o'); hold on
 plot(Ix1, Iz2_th, '-k')
 plot(Ix1, Iz3_th, '-k')
 plot(Ix1, Iz4_th, '-k')
-title('Output Iz as a function if input Ix', 'fontsize', fontsize)
+title('Output Iz as a function of input Ix', 'fontsize', fontsize)
 xlabel('Ix (A)', 'fontsize', fontsize)
 ylabel('Iz (A)', 'fontsize', fontsize)
