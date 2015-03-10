@@ -6,7 +6,7 @@ import sys, select
 
 s = smu.smu()
 current = logspace(-9, -2, 101)
-f = open('exp2retake1.csv', 'w')
+f = open('exp2take3.csv', 'w')
 sweep_current = ['Ix', 'Iy']
 
 def test_source():
