@@ -18,8 +18,8 @@ s.set_voltage(2, 0.)
 for val in v:
     s.set_voltage(1, val)
     s.autorange(1)
-    print s.get_current(2)
-    f.write('{!s},{!s}\n'.format(s.get_voltage(1), s.get_current(2)))
+    print s.get_current(2)*-1.
+    f.write('{!s},{!s}\n'.format(s.get_voltage(1), s.get_current(2)*-1.))
 s.set_voltage(1, 0.)
 s.set_voltage(2, 0.)
 
