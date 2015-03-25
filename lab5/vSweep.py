@@ -10,7 +10,7 @@ def linspace(initial, final, n = 100):
         return []
 
 s = smu.smu()
-v = linspace(0., 2., 301)
+v = linspace(0., 5., 301)
 f = open('nMOS_exp1.csv', 'w')
 f.write('V_G, I_channel')
 
