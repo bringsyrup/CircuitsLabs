@@ -11,9 +11,9 @@ def linspace(initial, final, n = 100):
 
 s = smu.smu()
 v = linspace(0., 5., 151)
-f = open('pMOS_exp2.csv', 'w')
-f.write('V_S, I_channel')
-s.set_voltage(2, 0.)
+f = open('pMOS_exp2_correct.csv', 'w')
+f.write('V_S, I_channel\n')
+s.set_voltage(2, -3.)
 
 for val in v:
     s.set_voltage(1, val)

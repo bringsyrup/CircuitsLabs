@@ -10,11 +10,11 @@ def linspace(initial, final, n = 100):
         return []
 
 s = smu.smu()
-v = linspace(0., 5, 151)
-f = open('pMOS_exp3_700mV.csv', 'w')
+v = linspace(-5., 0., 151)
+f = open('pMOS_exp3_-600mV.csv', 'w')
 f.write('V_DS, I_channel')
 #s.autorange(2)
-s.set_voltage(2, .7)
+s.set_voltage(2, -.6)
 #s.set_current(2, 0.)
 
 for val in v:
