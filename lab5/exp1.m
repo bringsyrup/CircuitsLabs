@@ -4,14 +4,13 @@
 % epsilon = 2*10^(-4);
 % [Is, VT, kappa] = ekvfit(V_NMOS(15:end), I_NMOS(15:end), epsilon, ['on'])
 %PMOS:
-hold all;
-epsilon = 2*10^(-4);
-[Is, VT, kappa] = ekvfit(V_NMOS(15:end), I_NMOS(15:end), epsilon, ['on'])
 
+epsilon = 4.5*10^(-5);
+[Is, VT, kappa] = ekvfit(V_PMOS(15:end), I_PMOS(15:end), epsilon, ['on'])
 
 %Transconductance gain: ----------------------------
-clf;
-hold all;
+% clf;
+% hold all;
 
 
 % Is = 1.9633*10^(-6);
