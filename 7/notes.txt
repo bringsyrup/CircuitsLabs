@@ -1,1 +1,2 @@
+for V_b near V_T0, V_b = .6V
 for V_b in saturation, V_b = 1.3V and V_2 = 4V
