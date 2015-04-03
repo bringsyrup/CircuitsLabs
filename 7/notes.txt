@@ -1,0 +1,1 @@
+for V_b in saturation, V_b = 1.3V and V_2 = 4V
