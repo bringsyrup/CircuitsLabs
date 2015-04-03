@@ -1,0 +1,25 @@
+clc; clf;
+%Experiment 1 --------------------------------------
+%NMOS:
+epsilon = 2*10^(-4);
+[Is, VT, kappa] = ekvfit(V_NMOS13(), I_NMOS13(), epsilon, ['on'])
+% NMOS11:
+% Is =
+%    1.8808e-06
+% VT =
+%     0.5786
+% kappa =
+%     0.7149
+% NMOS12
+% Is =
+%    1.9038e-06
+% VT =
+%     0.5767
+% kappa =
+%     0.7104
+% Is =
+%    1.9164e-06
+% VT =
+%     0.5798
+% kappa =
+%     0.7085
