@@ -1,0 +1,19 @@
+I ran the simulation in spice using pMOS transistors first with V_b = 4.4V for
+achieving moderate inversion, then with V_b = 3.7V (nMOS was 1.3V, so this is
+the approximate equivilent) to achieve strong inversion in the bias
+transistor. For moderate inversion, I swept V_1 from -.3 to .3 volta above
+V_2, which was set to 1V, 2V, and 3V. The data is scaled quite differently for
+moderate inversion (the max for I_b in nMOS was around 1.25e-6A, whereas the
+min I_b for pMOS is about -4.5e-9A), but the range of V_1 - V_2 over which the dominating
+current switches from one output current to the other is from about -120mV -
+120mV for both nMOS and pMOS. The scaling may have to do with the difference
+in V_T0 for both devices (aka, I don't really know if the pMOS was in weak or
+moderate inversion with V_b set to 4.4V).
+
+In strong inversion, once again the magnitude of the current drawn is smaller
+by two orders of magnitude for the pMOS, but both the nMOS and pMOS experience
+the swap of I_b in the range -.6V < V_1 - V_2 = .6V.  
+
+In both week and strong inversion, the node voltage behaves as expected
+for the pMOS, following whichever differential transistor is carrying I_b.
+
