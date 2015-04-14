@@ -10,15 +10,15 @@ def linspace(initial, final, n = 100):
         return []
 
 s = smu.smu()
-v = linspace(0, 5, 201)
-f = open('exp1_4V.csv', 'w')
+v = linspace(0, 5, 150)
+f = open('exp3_offset.csv', 'w')
 f.write('V1, Vout\n')
 s.set_current(2, 0.)
 
 for val in v:
     s.set_voltage(1, val)
-    s.autorange(1)
-    s.autorange(2)
+    s.set_autorange(1, 1)
+    s.set_autorange(2, 1)
     print s.get_voltage(2)
     f.write('{!s},{!s}\n'.format(s.get_voltage(1), s.get_voltage(2)))
 s.set_voltage(1, 0.)
