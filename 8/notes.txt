@@ -2,8 +2,8 @@ exp1 --> V_2 = 4V, 3V, 2V
          V_b = .7V, 1.4V
 
 exp2 --> V_1 vs V_out: 
-                    V_2 = 4V
-                    V_b = .7V
+                    V_2 = 2V
+                    V_b = 0.7V
          V_dm = 0:
                     V_1 = V_2 = 4V
          Vout fixed:
