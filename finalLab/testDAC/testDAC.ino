@@ -1,4 +1,4 @@
-float val = 0;           // variable to store the value read
+double val = 0;           // variable to store the value read
 
 void setup() {
   Serial.begin(9600); 
@@ -8,24 +8,52 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  digitalWrite(5, HIGH);
-  
-  val = analogRead(0);    // read the input pin
-  Serial.println(val/1023*5);             // debug value
-  
-//  int inputVal = 10;
-//  int maxVal = 8;
-//  for(int i = 1; i < 4; i++){
-//    digitalWrite
-//  }
+//  digitalWrite(2, HIGH);
+//  digitalWrite(3, HIGH);
+//  digitalWrite(4, LOW);
+//  digitalWrite(5, LOW);
+//  
+//  val = analogRead(0);    // read the input pin
+//  Serial.println(val/1023*5);             // debug value
+
+  for(int i = 0; i < 16; i++){
+    double sum = 0;
+    for(int j = 0; j < 100; j++){
+      if(i / 8 >= 1){
+        digitalWrite(2, HIGH);
+      }else{
+        digitalWrite(2, LOW);
+      }
+      if(i == 4 || i == 5 || i == 6 || i == 7 || i >= 12){
+        digitalWrite(3, HIGH);
+      }else{
+        digitalWrite(3, LOW);
+      }
+      if(i == 2 || i == 3 || i == 6 || i == 7 || i == 10 || i == 11 || i >= 14){
+        digitalWrite(4, HIGH);
+      }else{
+        digitalWrite(4, LOW);
+      }
+      if(i % 2 == 1){
+        digitalWrite(5, HIGH);
+      }else{
+        digitalWrite(5, LOW);
+      }
+      delay(50); //wait 50 miliseconds to let everything settle 
+
+      val = analogRead(0);
+      Serial.print(((val * 5) / 1023));
+      Serial.print(",");
+    }
+    Serial.println();
+  }
+  delay(100000000);
 }
 
+//Weighted with chips 1 & 2:
 //0  = 0.00
-//1  = 0.70
-//2  = 0.33
+//1  = 0.33
+//2  = 0.70
 //3  = 1.00
 //4  = 1.33
 //5  = 1.67
