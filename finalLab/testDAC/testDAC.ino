@@ -8,10 +8,10 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(2, HIGH);
-  digitalWrite(3, LOW);
-  digitalWrite(4, HIGH);
-  digitalWrite(5, HIGH);
+  digitalWrite(2, LOW); // bit 0 
+  digitalWrite(3, LOW);  // bit 1
+  digitalWrite(4, HIGH); // bit 2
+  digitalWrite(5, LOW);  // bit 3
   
   val = analogRead(0);    // read the input pin
   Serial.println(val/1023*5);             // debug value
@@ -24,8 +24,8 @@ void loop() {
 }
 
 //0  = 0.00
-//1  = 0.70
-//2  = 0.33
+//1  = 0.33
+//2  = 0.70
 //3  = 1.00
 //4  = 1.33
 //5  = 1.67
